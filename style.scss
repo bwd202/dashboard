@@ -48,9 +48,8 @@ section {
 aside {
     background-color: var(--lightblue);
     grid-row: 1 / span 2;
-    grid-auto-rows: 60px;
-    padding: 20px 30px 50px 20px;
-    // justify-items: start;
+    grid-auto-rows: 50px;
+    padding: 20px 60px 60px 20px;
     
     a {
         text-decoration: none;
