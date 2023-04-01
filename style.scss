@@ -48,19 +48,18 @@ section {
 aside {
     background-color: var(--lightblue);
     grid-row: 1 / span 2;
-    grid-auto-rows: 40px;
-    padding: 15px 30px 50px 15px;
+    grid-auto-rows: 60px;
+    padding: 20px 30px 50px 20px;
     // justify-items: start;
     
-    div {
+    a {
+        text-decoration: none;
         display: flex;
     }
 
     h2 {
         color: white;
+        padding-left: 5px;
     }
 
-    img {
-        height: 32px;
-    }
 }
