@@ -14,7 +14,8 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    // min-height prevents page cuttoff at the bottom in short viewports (vs. height)
     grid-template: auto 3fr / minmax(max-content, 15%) 3fr;
 }
 
@@ -45,20 +46,40 @@ section {
     background-color: white;
 }
 
+// SIDEBAR
+
 aside {
     background-color: var(--lightblue);
     grid-row: 1 / span 2;
-    grid-auto-rows: 50px;
     padding: 20px 60px 60px 20px;
+    grid-auto-rows: max-content;
+    // control icon height
     
     a {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
         text-decoration: none;
-        display: flex;
+        font-size: 0.8rem;
     }
+
+    a + a {
+        padding-bottom: 10px;
+    }
+
+    a:nth-child(7) {
+        margin-bottom: 100px;
+      }
 
     h2 {
         color: white;
-        padding-left: 5px;
+        align-self: center;
+        // align text with icon image center
     }
+
+   img {
+    align-self: center;
+    justify-self: center;
+    // center icon image along column and row axis
+   }
 
 }
