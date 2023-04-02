@@ -16,7 +16,7 @@
 body {
     min-height: 100vh;
     // min-height prevents page cuttoff at the bottom in short viewports (vs. height)
-    grid-template: auto 3fr / minmax(max-content, 15%) 3fr;
+    grid-template: auto 3fr / minmax(max-content, 18vw) 3fr;
 }
 
 header {
