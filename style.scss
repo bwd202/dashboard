@@ -16,16 +16,49 @@
 body {
     min-height: 100vh;
     // min-height prevents page cuttoff at the bottom in short viewports (vs. height)
-    grid-template: auto 3fr / minmax(max-content, 18vw) 3fr;
+    grid-template: auto 1fr / minmax(max-content, 18vw) 1fr;
+    grid-template-areas: 'sidebar header header' 'sidebar main main' 'sidebar main main';
 }
+
+// HEADER
 
 header {
+    grid-area: header;
     background-color: white;
-    grid-column: 2;
     padding: 5px 10px;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: "search links" "hello buttons";
+
+    #search {
+        grid-area: search;
+    }
+
+    #links {
+        grid-area: links;
+    }
+
+    #hello {
+        grid-area: hello;
+    }
+
+    #buttons {
+        grid-area: buttons;
+        place-self: center end;
+    }
+   
 }
 
+#buttons button {
+    background-color: var(--lightblue);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+
+
 main {
+    grid-area: main;
     grid-template-columns: 2fr 1fr;
     background-color: var(--lightgrey);
     padding: 10px;
@@ -49,6 +82,7 @@ section {
 // SIDEBAR
 
 aside {
+    grid-area: sidebar;
     background-color: var(--lightblue);
     grid-row: 1 / span 2;
     padding: 20px 60px 60px 20px;
@@ -77,9 +111,8 @@ aside {
     }
 
    img {
-    align-self: center;
-    justify-self: center;
-    // center icon image along column and row axis
+    place-self: center;
+    // shorthand for align and justify self 
    }
 
 }
