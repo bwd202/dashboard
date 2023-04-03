@@ -35,6 +35,12 @@ header {
     grid-template: 1fr 1fr / 2fr 1fr;
     grid-template-areas: "search links" "hello buttons";
 
+    img {
+        background-color: var(--lightgrey);
+        border-radius: 50%;
+        padding-right: 3px;
+    }
+    
     #search {
         grid-area: search;
     }
