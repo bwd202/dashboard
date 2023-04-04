@@ -26,13 +26,17 @@ button {
     cursor: pointer;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 // HEADER
 
 header {
     grid-area: header;
     background-color: white;
     padding: 10px 20px;
-    grid-template: 50px 1fr / 1fr 1fr;
+    grid-template: 50px 1fr / 2fr 1fr;
     grid-template-areas: "search links" "hello buttons";
     
     #search {
@@ -59,20 +63,27 @@ header {
     #links {
         grid-area: links;
         justify-self: end;
-
-        a {
-            text-decoration: none;
-        }
     }
 
     #hello {
         grid-area: hello;
+        // display: flex;
+        // align-items: center;
 
         img {
             background-color: var(--lightgrey);
             border-radius: 50%;
-            padding-right: 3px;
+            float: left;
+            margin-right: 10px;
         }
+
+        p {
+            display: inline-block;
+            height: 100%;
+            line-height: 1.5rem;
+            padding-top: 5px;
+        }
+
     }
 
     #header-buttons {
@@ -132,7 +143,6 @@ aside {
     a {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        text-decoration: none;
         font-size: 0.8rem;
     }
 
