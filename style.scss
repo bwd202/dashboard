@@ -31,54 +31,70 @@ button {
 header {
     grid-area: header;
     background-color: white;
-    padding: 5px 10px;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    padding: 10px 20px;
+    grid-template: 50px 1fr / 1fr 1fr;
     grid-template-areas: "search links" "hello buttons";
-
-    img {
-        background-color: var(--lightgrey);
-        border-radius: 50%;
-        padding-right: 3px;
-    }
     
     #search {
         grid-area: search;
+        display: flex;
+        align-items: flex-start;
+
+        button {
+            background-color: white;
+            border: 0;
+            padding-right: 5px;
+        }
+        
+        input {
+            flex: 1;
+            background-color: var(--lightgrey);
+            border: none;
+            border-radius: 20px;
+            padding: 5px;
+        }
+        
     }
 
     #links {
         grid-area: links;
         justify-self: end;
+
+        a {
+            text-decoration: none;
+        }
     }
 
     #hello {
         grid-area: hello;
+
+        img {
+            background-color: var(--lightgrey);
+            border-radius: 50%;
+            padding-right: 3px;
+        }
     }
 
     #header-buttons {
         grid-area: buttons;
         place-self: center end;
-    }
+
+        button {
+            background-color: var(--lightblue);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            // remove default border
+        
+            &:active {
+                background-color: var(--button-active);
+            }
+        
+        }
    
-}
-
-#header-buttons button {
-    background-color: var(--lightblue);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    // remove default border
-
-    &:active {
-        background-color: var(--button-active);
     }
-
 }
-
-#links a {
-    text-decoration: none;
-}
-
 
 
 main {
