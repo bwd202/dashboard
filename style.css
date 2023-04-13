@@ -44,6 +44,10 @@ a {
   display: flex;
 }
 
+.round-img {
+  border-radius: 50%;
+}
+
 header {
   grid-area: header;
   background-color: white;
@@ -75,7 +79,6 @@ header #hello {
 }
 header #hello img {
   background-color: var(--lightgrey);
-  border-radius: 50%;
   float: left;
   margin-right: 10px;
 }
@@ -144,6 +147,16 @@ section h3 {
 section h3:last-of-type {
   margin-top: 10px;
 }
+section a {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding: 10px;
+  gap: 12px;
+}
+section a img + p {
+  align-self: center;
+}
+
 aside {
   grid-area: sidebar;
   background-color: var(--lightblue);

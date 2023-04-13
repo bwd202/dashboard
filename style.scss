@@ -49,6 +49,10 @@ a {
   display: flex;
 }
 
+.round-img {
+  border-radius: 50%;
+}
+
 // HEADER
 
 header {
@@ -89,7 +93,6 @@ header {
 
     img {
       background-color: var(--lightgrey);
-      border-radius: 50%;
       float: left;
       margin-right: 10px;
     }
@@ -175,8 +178,17 @@ section {
     }
   }
 
-  div {
-    // align-self: start;
+  a {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    padding: 10px;
+    gap: 12px;
+
+    img + p {
+      align-self: center;
+    }
+
+   
   }
 }
 
