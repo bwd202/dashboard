@@ -41,6 +41,10 @@ a {
   display: grid;
 }
 
+.flex {
+  display: flex;
+}
+
 // HEADER
 
 header {
@@ -117,8 +121,9 @@ main {
   grid-area: main;
   grid-template-columns: 3fr max(max-content, 1fr);
   background-color: var(--lightgrey);
-  padding: 2%;
+  padding: 15px;
   grid-template-areas: 'cards section';
+  gap: 15px;
 }
 
 article {
@@ -167,28 +172,27 @@ section {
 aside {
   grid-area: sidebar;
   background-color: var(--lightblue);
-  padding: 20px 60px 60px 20px;
-  grid-auto-rows: max-content;
-  // control icon height
+  padding-right: 20px;
+  flex-direction: column;
 
   a {
     display: grid;
     grid-template-columns: 1fr 2fr;
     font-size: 0.8rem;
+    padding: 10px;
   }
 
-  a + a {
-    padding-bottom: 10px;
-  }
-
-  a:nth-child(7) {
-    margin-bottom: 100px;
+  a:nth-child(8) {
+    margin-top: auto;
+    // push icons to the bottom of sidebar
   }
 
   h2 {
     color: white;
     align-self: center;
     // align text with icon image center
+    width: 130px;
+    // to prevent communist jankiness
   }
 
   img {

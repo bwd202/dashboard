@@ -36,6 +36,10 @@ a {
   display: grid;
 }
 
+.flex {
+  display: flex;
+}
+
 header {
   grid-area: header;
   background-color: white;
@@ -94,8 +98,9 @@ main {
   grid-area: main;
   grid-template-columns: 3fr max(max-content, 1fr);
   background-color: var(--lightgrey);
-  padding: 2%;
+  padding: 15px;
   grid-template-areas: "cards section";
+  gap: 15px;
 }
 
 article {
@@ -135,23 +140,22 @@ section {
 aside {
   grid-area: sidebar;
   background-color: var(--lightblue);
-  padding: 20px 60px 60px 20px;
-  grid-auto-rows: max-content;
+  padding-right: 20px;
+  flex-direction: column;
 }
 aside a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   font-size: 0.8rem;
+  padding: 10px;
 }
-aside a + a {
-  padding-bottom: 10px;
-}
-aside a:nth-child(7) {
-  margin-bottom: 100px;
+aside a:nth-child(8) {
+  margin-top: auto;
 }
 aside h2 {
   color: white;
   align-self: center;
+  width: 130px;
 }
 aside img {
   place-self: center;
