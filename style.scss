@@ -134,8 +134,8 @@ main {
 }
 
 article {
-  grid-template-rows: min(min-content, 1fr) 1fr;
-  grid-template: 'article-heading' 'article-body';
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: 'article-heading' 'article-body';
   // to accomodate h2 on top of cards
 
   h3 {
