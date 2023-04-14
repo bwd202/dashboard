@@ -183,12 +183,19 @@ section {
     grid-template-columns: max-content 1fr;
     padding: 10px;
     gap: 12px;
+    color: black;
 
-    img + p {
-      align-self: center;
+    img + div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-   
+    div {
+      p + p {
+        color: grey;
+      }
+    }
   }
 }
 
